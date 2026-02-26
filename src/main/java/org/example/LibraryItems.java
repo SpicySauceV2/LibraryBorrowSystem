@@ -3,7 +3,7 @@ package org.example;
 public abstract class LibraryItems implements libraryRules {
     protected String id;
     protected String title;
-    protected Boolean isBorrowed;
+    public Boolean isBorrowed;
     protected int maxBorrowedDays;
 
     public LibraryItems (String id,String title,Boolean isBorrowed,int maxBorrowedDays){
@@ -57,5 +57,9 @@ public abstract class LibraryItems implements libraryRules {
 
     public void setBorrowed(boolean borrowed) {
         this.isBorrowed = borrowed;
+    }
+
+    public boolean isBorrowed() {
+        return isBorrowed;
     }
 }
